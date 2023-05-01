@@ -11,7 +11,7 @@ public class Ez129ContainsDuplicateII {
     public static boolean containsNearbyDuplicate(int[] nums, int k) {
         final int len = nums.length;
         if (len < 2) return false;
-        final Set<Integer> windowSet = new HashSet();
+        final Set<Integer> windowSet = new HashSet<>();
         for (int i = 0; i <= k && i < len; i++) {
             if (windowSet.contains(nums[i])) return true;
             windowSet.add(nums[i]);
